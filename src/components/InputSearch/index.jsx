@@ -10,7 +10,7 @@ export const InputSearch =()=>{
         <StyledSearch>
 
             <input type="text" placeholder="Digitar Pesquisa" />
-            <BtnPrimary>Pesquisar</BtnPrimary>
+            <BtnPrimary >Pesquisar</BtnPrimary>
 
         </StyledSearch>
     )

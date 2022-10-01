@@ -35,6 +35,7 @@ export const StyledProduct= styled.li`
 
         span{
             font-size: 14px;
+            color: var(--gray-50);
         }
 
         p{

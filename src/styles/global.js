@@ -44,6 +44,7 @@ const  GlobalStyle = createGlobalStyle`
       border-radius: 8px;
       padding: 10px;
       font-weight: 600;
+      cursor: pointer;
    }
 `
 

@@ -35,7 +35,7 @@ export const StyledCartProduct=styled.li`
         padding: 0 10px 0 0;
         
         
-
+    
 
         & h4{
             text-overflow: ellipsis;
@@ -52,6 +52,21 @@ export const StyledCartProduct=styled.li`
             justify-self: flex-end;
         }
     
+    }
+
+    .btnQtd {
+
+     
+
+        & span{
+            width: 30px;
+            height: 20px;
+            padding: 2px 0px 2px 5px;
+            color: var(--gray-100);
+         
+           
+           
+        }
     }
 
     @media (min-width:360px) {
