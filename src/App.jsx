@@ -4,7 +4,7 @@ import { Cart } from './components/Cart';
 import { Header } from './components/Header';
 import { ProductsList } from './components/ProductsList';
 import { api } from './services/api';
-import { StyledTitle } from './styles/typography';
+
 
 
 
@@ -47,7 +47,7 @@ function App() {
      
         <Cart currentSale={currentSale} setCurrentSale={setCurrentSale}></Cart>
        </main>
-       <button onClick={()=> console.log(isSearch)}> teste</button>
+      
     </div>
   );
 }
