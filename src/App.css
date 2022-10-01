@@ -2,6 +2,32 @@
   width: 100vw;
 }
 
+.App .searchTitle{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 10px 0px 30px;
+    gap: 20px;
+    
+}
+
+.App .searchTitle h2{
+  font-size: 26px;
+}
+
+@media(min-width:800px){
+  .App  .searchTitle{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.App .searchTitle span{
+  font-size: 26px;
+  color: var(--gray-50);
+
+}
+
+
 @media (min-width:1024px){
 
   .App main{

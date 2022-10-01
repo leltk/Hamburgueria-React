@@ -3,7 +3,7 @@ import { InputSearch } from "../InputSearch";
 import { StyledHeader } from "./Header";
 
 
-export const Header =()=>{
+export const Header =( {setFilteredProducts,products,setIsSearch,setSearch})=>{
 
 
     return(
@@ -11,7 +11,7 @@ export const Header =()=>{
         <StyledHeader>
             <div>
                 <img src={require( "./../../images/burguerKenzie.png")} alt="" />
-                <InputSearch></InputSearch>
+                <InputSearch setFilteredProducts={setFilteredProducts} setIsSearch={setIsSearch} products={products} setSearch={setSearch}></InputSearch>
             </div>
            
          

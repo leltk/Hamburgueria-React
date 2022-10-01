@@ -4,13 +4,16 @@ import { Cart } from './components/Cart';
 import { Header } from './components/Header';
 import { ProductsList } from './components/ProductsList';
 import { api } from './services/api';
+import { StyledTitle } from './styles/typography';
 
 
 
 function App() {
   const [products, setProducts] = useState([])
   const [currentSale, setCurrentSale] = useState([])
-
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [isSearch, setIsSearch]= useState(false)
+  const [search, setSearch] = useState("")
   useEffect(()=>{
   
       api.get()
@@ -23,12 +26,28 @@ function App() {
 
   return (
     <div className="App">
-       <Header></Header>
+       <Header  setFilteredProducts={setFilteredProducts} products={products} setIsSearch={setIsSearch} setSearch={setSearch}></Header>
+
+        {
+          isSearch && 
+
+          <div className='searchTitle'> <h2> Resultados para:</h2> <span>{search}</span></div>
+          
+        }
+
        <main>
-       <ProductsList products={products} setCurrentSale={setCurrentSale} currentSale={currentSale} ></ProductsList>
-       <Cart currentSale={currentSale} setCurrentSale={setCurrentSale}></Cart>
+       
+        {!isSearch ? 
+         
+          <ProductsList products={products} setCurrentSale={setCurrentSale} currentSale={currentSale} ></ProductsList>
+          
+        :
+          <ProductsList products={filteredProducts} setCurrentSale={setCurrentSale} currentSale={currentSale} ></ProductsList>
+        }
+     
+        <Cart currentSale={currentSale} setCurrentSale={setCurrentSale}></Cart>
        </main>
-       <button onClick={()=> console.log(currentSale)}> teste</button>
+       <button onClick={()=> console.log(isSearch)}> teste</button>
     </div>
   );
 }

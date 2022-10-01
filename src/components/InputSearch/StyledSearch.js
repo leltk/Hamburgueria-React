@@ -9,7 +9,8 @@ export const StyledSearch = styled.div`
         width: 95%;
         max-width: 550px;
         background-color: var(--white);
-
+        
+       
 
     input{
         border: none;
@@ -17,6 +18,8 @@ export const StyledSearch = styled.div`
         width: 95%;
         height: 40px;
         
+        
+     
     }
 
     input[type="text"]::-webkit-input-placeholder{
